@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 19/12/2020 21:14:16
+ Date: 26/01/2021 19:23:27
 */
 
 SET NAMES utf8mb4;
@@ -28,12 +28,16 @@ CREATE TABLE `admin`  (
   `nickname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `avatar` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `position` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `token` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of admin
 -- ----------------------------
-INSERT INTO `admin` VALUES (1, 'admin', '123456', 'inkwall', 'admin@qq.com', '12345678');
+INSERT INTO `admin` VALUES (1, 'admin', '123456', '城墙墨', 'admin@qq.com', '12345678', 'https://cdn.jsdelivr.net/gh/inkwall233/imgcdn/avatar.jpg', '管理员', 'uesr-admin-123');
+INSERT INTO `admin` VALUES (2, 'custom', '123456', '用户', 'custom@qq.com', '123456', '', '用户', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;
